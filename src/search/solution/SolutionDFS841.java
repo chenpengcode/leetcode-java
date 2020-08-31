@@ -23,12 +23,13 @@ public class SolutionDFS841 {
 
     private void dfs(List<List<Integer>> rooms, int x) {
         vis[x] = true;
-        num ++;
+        num++;
         for (Integer it : rooms.get(x)) {
             if (!vis[it])
                 dfs(rooms, it);
         }
     }
+
     @Test
     public void test01() {
 
