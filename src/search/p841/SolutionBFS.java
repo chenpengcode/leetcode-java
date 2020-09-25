@@ -1,4 +1,4 @@
-package search.solution;
+package search.p841;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.Queue;
  * @Author ChenPeng
  * @Date 2020-08-31 8:30
  */
-public class SolutionBFS841 {
+public class SolutionBFS {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         int n = rooms.size(), num = 0;
         boolean[] vis = new boolean[n];

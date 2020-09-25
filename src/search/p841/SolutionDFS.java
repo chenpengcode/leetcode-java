@@ -1,4 +1,4 @@
-package search.solution;
+package search.p841;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ import java.util.List;
  * @Author ChenPeng
  * @Date 2020-08-31 8:17
  */
-public class SolutionDFS841 {
+public class SolutionDFS {
     boolean[] vis;
     int num;
 
