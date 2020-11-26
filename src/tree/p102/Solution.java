@@ -6,10 +6,7 @@ package tree.p102;
  * @Date 2020-11-19 22:17
  */
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 class Solution {
     public List<List<Integer>> ans = new ArrayList<>();
@@ -56,5 +53,34 @@ class Solution {
         ans.get(level).add(root.val);
         helper(root.left, level + 1);
         helper(root.right, level + 1);
+    }
+
+    public List<List<Integer>> levelOrderDfs(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        Deque<TreeNode> nodeStack = new ArrayDeque<>();
+        Deque<Integer> depthStack = new ArrayDeque<>();
+        List<List<Integer>> ans = new ArrayList<>();
+        nodeStack.addLast(root);
+        depthStack.addLast(0);
+
+        while (!nodeStack.isEmpty()) {
+            TreeNode node = nodeStack.pollLast();
+            int level = depthStack.pollLast();
+            if (ans.size() == level) {
+                ans.add(new ArrayList<>());
+            }
+            ans.get(level).add(node.val);
+            if (node.right != null) {
+                nodeStack.addLast(node.right);
+                depthStack.addLast(level + 1);
+            }
+            if (node.left != null) {
+                nodeStack.addLast(node.left);
+                depthStack.addLast(level + 1);
+            }
+        }
+        return ans;
     }
 }
