@@ -23,7 +23,7 @@ public class Solution {
     }
 
     public int maxSubArray_2(int[] nums) {
-        int pre = nums[0];
+        int pre = 0;
         int ans = nums[0];
         for (int num : nums) {
             pre = Math.max(pre + num, num);
