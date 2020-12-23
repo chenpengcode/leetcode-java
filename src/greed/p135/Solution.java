@@ -23,6 +23,11 @@ public class Solution {
         return ans;
     }
 
+    /**
+     * inc 为上一个递增序列的长度， dec为当前递减序列的长度
+     * pre 为上一个同学分配的数量
+     * @return 最终分配所需要的最少数量
+     * **/
     public int candy2(int[] ratings) {
         int n = ratings.length;
         int ans = 1;
