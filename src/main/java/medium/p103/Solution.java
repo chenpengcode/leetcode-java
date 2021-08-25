@@ -1,5 +1,6 @@
-package main.java.easy.tree.p103;
+package medium.p103;
 
+import tree.TreeNode;
 import java.util.*;
 
 /**
@@ -7,14 +8,6 @@ import java.util.*;
  * @Author CP
  * @Date 2020/12/22
  */
-
-//Definition for a binary main.java.easy.tree node.
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
 
 public class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
