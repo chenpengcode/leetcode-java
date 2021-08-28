@@ -1,4 +1,4 @@
-package main.java.easy.tree.p94;
+package easy.tree.p94;
 
 import main.java.easy.tree.TreeNode;
 
