@@ -1,6 +1,6 @@
 package main.java.easy.tree.p107;
 
-//Definition for a binary main.java.easy.tree node.
+//Definition for a binary main.java.tree node.
 public class TreeNode {
     public int val;
     public TreeNode left;

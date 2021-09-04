@@ -5,7 +5,7 @@ package tree;
  * @Author CHENPENG
  * @Date 2021/8/25
  */
-//Definition for a binary main.java.easy.tree node.
+//Definition for a binary main.java.tree node.
 public class TreeNode {
     public int val;
     public TreeNode left;

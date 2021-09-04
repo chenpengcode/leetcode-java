@@ -1,4 +1,4 @@
-package easy.tree.p144;
+package tree.easy.p144;
 
 import tree.TreeNode;
 

@@ -1,6 +1,6 @@
-package main.java.easy.tree.p938;
+package tree.p938;
 
-import main.java.easy.tree.TreeNode;
+import tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

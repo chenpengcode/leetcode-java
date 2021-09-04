@@ -1,10 +1,9 @@
-package easy.tree.p100;
+package tree.easy.p100;
 
 import tree.TreeNode;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Stack;
 
 /**
  * @Description

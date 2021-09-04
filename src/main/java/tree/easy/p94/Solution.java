@@ -1,4 +1,4 @@
-package easy.tree.p145;
+package tree.easy.p94;
 
 import tree.TreeNode;
 
@@ -7,11 +7,12 @@ import java.util.List;
 
 /**
  * @Description
- * @Author CHENPENG
- * @Date 2021/9/3
+ * @Author CP
+ * @Date 2020/12/22
  */
-class Solution {
-    public List<Integer> postorderTraversal(TreeNode root) {
+public class Solution {
+
+    public List<Integer> inorderTraversalRec(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         dfs(root, ans);
         return ans;
@@ -22,7 +23,7 @@ class Solution {
             return;
         }
         dfs(root.left, ans);
-        dfs(root.right, ans);
         ans.add(root.val);
+        dfs(root.right, ans);
     }
 }

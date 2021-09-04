@@ -1,17 +1,17 @@
-package easy.tree.p94;
+package tree.easy.p144;
 
-import main.java.easy.tree.TreeNode;
+import tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @Description
- * @Author CP
- * @Date 2021/4/27
+ * @Author CHENPENG
+ * @Date 2021/9/2
  */
 public class Solution3 {
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         TreeNode cur = root, p;
         while (cur != null) {
@@ -24,12 +24,12 @@ public class Solution3 {
                     p = p.right;
                 }
                 if (p.right == null) {
+                    ans.add(cur.val);
                     p.right = cur;
                     cur = cur.left;
                 } else {
-                    ans.add(cur.val);
-                    cur = cur.right;
                     p.right = null;
+                    cur = cur.right;
                 }
             }
         }

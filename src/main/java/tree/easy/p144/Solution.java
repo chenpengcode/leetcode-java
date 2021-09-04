@@ -1,29 +1,26 @@
-package easy.tree.p94;
+package tree.easy.p144;
 
-import main.java.easy.tree.TreeNode;
+import tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @Description
- * @Author CP
- * @Date 2020/12/22
+ * @Author CHENPENG
+ * @Date 2021/9/2
  */
-public class Solution {
-
-    public List<Integer> inorderTraversalRec(TreeNode root) {
+class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         dfs(root, ans);
         return ans;
     }
 
     private void dfs(TreeNode root, List<Integer> ans) {
-        if (root == null) {
-            return;
-        }
-        dfs(root.left, ans);
+        if (root == null) {return;}
         ans.add(root.val);
+        dfs(root.left, ans);
         dfs(root.right, ans);
     }
 }

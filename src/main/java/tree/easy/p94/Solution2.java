@@ -1,6 +1,6 @@
-package easy.tree.p94;
+package tree.easy.p94;
 
-import main.java.easy.tree.TreeNode;
+import tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Deque;

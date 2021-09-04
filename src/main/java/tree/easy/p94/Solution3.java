@@ -1,4 +1,4 @@
-package easy.tree.p144;
+package tree.easy.p94;
 
 import tree.TreeNode;
 
@@ -7,11 +7,11 @@ import java.util.List;
 
 /**
  * @Description
- * @Author CHENPENG
- * @Date 2021/9/2
+ * @Author CP
+ * @Date 2021/4/27
  */
 public class Solution3 {
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         TreeNode cur = root, p;
         while (cur != null) {
@@ -24,12 +24,12 @@ public class Solution3 {
                     p = p.right;
                 }
                 if (p.right == null) {
-                    ans.add(cur.val);
                     p.right = cur;
                     cur = cur.left;
                 } else {
-                    p.right = null;
+                    ans.add(cur.val);
                     cur = cur.right;
+                    p.right = null;
                 }
             }
         }
