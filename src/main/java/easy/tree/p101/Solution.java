@@ -1,4 +1,6 @@
-package main.java.easy.tree.p101;
+package easy.tree.p101;
+
+import tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
