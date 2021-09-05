@@ -12,7 +12,9 @@ import java.util.*;
 public class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
-        if (root == null) return ans;
+        if (root == null) {
+            return ans;
+        }
         // 树的广度优先遍历一般是使用队列
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
@@ -27,12 +29,17 @@ public class Solution {
                 TreeNode node = queue.poll();
                 // 如果是要从左向右读，那么添加到队尾
                 if (isLeft) {
+                    assert node != null;
                     list.addLast(node.val);
                 } else { //弱国是要从右向左读，那么添加到对头
                     list.addFirst(node.val);
                 }
-                if (node.left != null) queue.offer(node.left);
-                if (node.right != null) queue.offer(node.right);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
             }
             // 每次遍历完一层，则更改标识符，表明下次的顺序与本次相反
             isLeft = !isLeft;
@@ -52,7 +59,9 @@ public class Solution {
     }
 
     private void dfs(TreeNode root, int i, boolean isLeft, List<Deque<Integer>> ans) {
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         if (ans.size() == i) {
             ans.add(new LinkedList<>());
         }

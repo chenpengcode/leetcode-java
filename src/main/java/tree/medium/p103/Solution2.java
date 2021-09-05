@@ -12,7 +12,9 @@ import java.util.*;
 class Solution2 {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
-        if (root == null) return ans;
+        if (root == null) {
+            return ans;
+        }
         boolean isLeft = true;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
@@ -22,10 +24,17 @@ class Solution2 {
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 assert node != null;
-                if (isLeft) deque.offerLast(node.val);
-                else deque.offerFirst(node.val);
-                if (node.left != null) queue.offer(node.left);
-                if (node.right != null) queue.offer(node.right);
+                if (isLeft) {
+                    deque.offerLast(node.val);
+                } else {
+                    deque.offerFirst(node.val);
+                }
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
             }
             isLeft = !isLeft;
             ans.add(new ArrayList<>(deque));
