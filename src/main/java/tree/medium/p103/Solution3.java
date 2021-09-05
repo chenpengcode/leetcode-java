@@ -1,4 +1,4 @@
-package medium.p103;
+package tree.medium.p103;
 
 import tree.TreeNode;
 
@@ -24,10 +24,17 @@ public class Solution3 {
     }
 
     private void dfs(TreeNode root, int level, boolean isLeft, List<Deque<Integer>> list) {
-        if (root == null) return;
-        if (list.size() == level) list.add(new LinkedList<>());
-        if (isLeft) list.get(level).offerLast(root.val);
-        else list.get(level).offerFirst(root.val);
+        if (root == null) {
+            return;
+        }
+        if (list.size() == level) {
+            list.add(new LinkedList<>());
+        }
+        if (isLeft) {
+            list.get(level).offerLast(root.val);
+        } else {
+            list.get(level).offerFirst(root.val);
+        }
         dfs(root.left, level + 1, !isLeft, list);
         dfs(root.right, level + 1, !isLeft, list);
     }

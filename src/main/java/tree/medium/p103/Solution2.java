@@ -1,4 +1,4 @@
-package medium.p103;
+package tree.medium.p103;
 
 import tree.TreeNode;
 
