@@ -5,6 +5,9 @@ import tree.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * @author CHENPENG
+ */
 public class Solution {
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {
