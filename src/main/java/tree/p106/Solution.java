@@ -1,24 +1,27 @@
-package main.java.easy.tree.p106;
+package tree.p106;
+
+import tree.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;
 
 class Solution {
-    int post_idx;
+    int postIdx;
     int[] postorder;
     int[] inorder;
-    Map<Integer, Integer> idx_map = new HashMap<Integer, Integer>();
+    Map<Integer, Integer> idxMap = new HashMap<Integer, Integer>();
 
-    public TreeNode helper(int in_left, int in_right) {
-        if (in_left > in_right)
+    public TreeNode helper(int inLeft, int inRight) {
+        if (inLeft > inRight) {
             return null;
+        }
 
-        int val = postorder[post_idx];
+        int val = postorder[postIdx];
         TreeNode root = new TreeNode(val);
-        int index = idx_map.get(val);
-        post_idx--;
-        root.right = helper(index + 1, in_right);
-        root.left = helper(in_left, index - 1);
+        int index = idxMap.get(val);
+        postIdx--;
+        root.right = helper(index + 1, inRight);
+        root.left = helper(inLeft, index - 1);
         return root;
     }
 
@@ -26,10 +29,10 @@ class Solution {
         this.postorder = postorder;
         this.inorder = inorder;
 
-        post_idx = postorder.length - 1;
+        postIdx = postorder.length - 1;
         int idx = 0;
         for (int val : inorder) {
-            idx_map.put(val, idx++);
+            idxMap.put(val, idx++);
         }
         return helper(0, inorder.length - 1);
     }

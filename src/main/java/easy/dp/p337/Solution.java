@@ -1,4 +1,6 @@
-package main.java.easy.dp.p337;
+package easy.dp.p337;
+
+import tree.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;

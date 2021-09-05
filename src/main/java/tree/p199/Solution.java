@@ -1,6 +1,6 @@
-package main.java.easy.tree.p199;
+package tree.p199;
 
-import main.java.easy.tree.p107.TreeNode;
+import tree.TreeNode;
 
 import java.util.*;
 
