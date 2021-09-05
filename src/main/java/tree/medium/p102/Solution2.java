@@ -13,11 +13,11 @@ import java.util.List;
 public class Solution2 {
     List<List<Integer>> ans = new ArrayList<>();
     public List<List<Integer>> levelOrder(TreeNode root) {
-        helper(root, 0);
+        dfs(root, 0);
         return ans;
     }
 
-    private void helper(TreeNode root, int level) {
+    private void dfs(TreeNode root, int level) {
         if (root == null) {
             return;
         }
@@ -25,7 +25,7 @@ public class Solution2 {
             ans.add(new ArrayList<>());
         }
         ans.get(level).add(root.val);
-        helper(root.left, level + 1);
-        helper(root.right, level + 1);
+        dfs(root.left, level + 1);
+        dfs(root.right, level + 1);
     }
 }

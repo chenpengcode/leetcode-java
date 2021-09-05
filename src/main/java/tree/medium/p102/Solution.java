@@ -1,11 +1,5 @@
 package tree.medium.p102;
 
-/**
- * @Description
- * @Author ChenPeng
- * @Date 2020-11-19 22:17
- */
-
 import tree.TreeNode;
 
 import java.util.*;
