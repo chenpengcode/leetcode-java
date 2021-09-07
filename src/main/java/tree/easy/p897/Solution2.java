@@ -10,7 +10,7 @@ import tree.TreeNode;
 public class Solution2 {
     private TreeNode res;
 
-    public TreeNode increasingBST (TreeNode root) {
+    public TreeNode increasingBST(TreeNode root) {
         TreeNode p = new TreeNode(-1);
         res = p;
         inorder(root);
