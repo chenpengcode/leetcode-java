@@ -1,6 +1,6 @@
-package main.java.easy.tree.p897;
+package tree.easy.p897;
 
-import main.java.easy.tree.TreeNode;
+import tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,9 @@ public class Solution {
     }
 
     public void inorder(TreeNode root, List<Integer> res) {
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
 
         inorder(root.left, res);
         res.add(root.val);

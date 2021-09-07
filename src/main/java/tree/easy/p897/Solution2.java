@@ -1,6 +1,6 @@
-package main.java.easy.tree.p897;
+package tree.easy.p897;
 
-import main.java.easy.tree.TreeNode;
+import tree.TreeNode;
 
 /**
  * @Description
@@ -18,7 +18,9 @@ public class Solution2 {
     }
 
     private void inorder(TreeNode root) {
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
 
         inorder(root.left);
 
