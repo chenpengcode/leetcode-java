@@ -1,4 +1,4 @@
-package tree.p106;
+package tree.medium.p106;
 
 import tree.TreeNode;
 
@@ -9,7 +9,7 @@ class Solution {
     int postIdx;
     int[] postorder;
     int[] inorder;
-    Map<Integer, Integer> idxMap = new HashMap<Integer, Integer>();
+    Map<Integer, Integer> idxMap = new HashMap<>();
 
     public TreeNode helper(int inLeft, int inRight) {
         if (inLeft > inRight) {
